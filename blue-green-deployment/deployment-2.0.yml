@@ -4,6 +4,7 @@ metadata:
   name: nginx-deployment
   labels:
     app: nginx
+    version: 2.0
 spec:
   replicas: 3
   selector:
