@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: balabhaskararao/bala-hello-1.0:latest
+        image: balabhaskararao/bala-hello-2.0:latest
         ports:
         - containerPort: 80
