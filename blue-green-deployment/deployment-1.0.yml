@@ -1,15 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-deployment-1.0
   labels:
     app: nginx
+    version: '1.0'
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: nginx
-      test: 1.0
+      version: '1.0'
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -19,7 +20,7 @@ spec:
     metadata:
       labels:
         app: nginx
-        test: 1.0
+        version: '1.0'
     spec:
       containers:
       - name: nginx
